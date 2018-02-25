@@ -4,17 +4,17 @@
 
 
         <div class="card mt-3 pl-2 pr-2">
-                <form>
+                <form action="/signup" method="post">
                         <div class="form-group">
                                 @csrf
-                                <label for="exampleInputName">Name</label>
-                                <input type="name" class="form-control" id="exampleInputName"
+                                <label for="Name">Name</label>
+                                <input type="name" class="form-control" id="Name"
                                        placeholder="Name">
                         </div>
                         <div class="form-group">
                                 @csrf
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                <label for="Email">Email address</label>
+                                <input type="email" class="form-control" id="Email"
                                        aria-describedby="emailHelp" placeholder="Enter email">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                         anyone else.
@@ -22,14 +22,14 @@
                         </div>
                         <div class="form-group">
                                 @csrf
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                <label for="Password">Password</label>
+                                <input type="password" class="form-control" id="Password"
                                        placeholder="Password">
                         </div>
                         <div class="form-group">
                                 @csrf
-                                <label for="exampleInputPassword2">Confirm The Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword2"
+                                <label for="Password">Confirm The Password</label>
+                                <input type="password" class="form-control" id="Password"
                                        placeholder="Password">
                         </div>
 

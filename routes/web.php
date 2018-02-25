@@ -11,17 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-})->name('home');
+Route::get('/', 'PagesController@home')->name('home');
 
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
+Route::get('/about', 'PagesController@about')->name('about');
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::post('/contact', function () {
 
     $data = request()->all();
@@ -38,10 +32,10 @@ Route::post('/signup', function () {
 
     $data = request()->all();
 
-    echo"Name=" . $data['exampleInputName'] . '<br>';
-    echo"Email= " . $data['exampleInputEmail1'] . '<br>';
-    echo"Password= " . $data['exampleInputPassword1'] . '<br>';
-    echo"Confirm The Password= " . $data['exampleInputPassword2'];
+    echo"Name=" . $data['name'] . '<br>';
+    echo"Email= " . $data['email'] . '<br>';
+    echo"Password= " . $data['password'] . '<br>';
+    echo"Confirm The Password= " . $data['password'];
 
 
 })->name('signup');
@@ -59,6 +53,9 @@ Route::get('/viewmessages', function () {
 })->name('viewmessages');
 Route::get('/bootstrapcard', function () {
     return view('pages.bootstrapcard');
+});
+Route::get('/thankyou', function () {
+    return view('pages.thankyou');
 });
 
 
